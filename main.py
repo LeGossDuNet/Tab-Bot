@@ -17,6 +17,7 @@ consonants = ['','n','r','t','l','c','b']
 add_tab = [1081,16]
 search_bar = [609,382]
 close_tab = [1039, 18]
+
 #Countdown before start
 time.sleep(10)
 
@@ -24,10 +25,10 @@ time.sleep(10)
 def search():
     while True:
         #Generate word
-        mot = [consonants[random.randint(1,6)],vowels[random.randint(1,5)],consonants[random.randint(1,6)],consonants[random.randint(1,6)],vowels[random.randint(1,5)],vowels[random.randint(1,5)]]
-        motStr = ' '.join([str(elem) for elem in mot])
-        motStr.replace(' ', '', (5))
-        print(motStr)
+        Word = [consonants[random.randint(1,6)],vowels[random.randint(1,5)],consonants[random.randint(1,6)],consonants[random.randint(1,6)],vowels[random.randint(1,5)],vowels[random.randint(1,5)]]
+        WordStr = ' '.join([str(elem) for elem in Word])
+        WordStr.replace(' ', '', (5))
+        print(WordStr)
         #Search
         mouse.position = (add_tab[0],add_tab[1])
         mouse.press(Button.left)
@@ -36,7 +37,7 @@ def search():
         time.sleep(2)
         mouse.press(Button.left)
         mouse.release(Button.left)
-        keyboard.type(motStr)
+        keyboard.type(WordStr)
         for space in range(5):
             keyboard.press(Key.left)
             keyboard.release(Key.left)
