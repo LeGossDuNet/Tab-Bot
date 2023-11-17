@@ -2,7 +2,7 @@
 
 First,you need python(with pip) and pynput library
 
-Open five in yor browser tab(don't close them)
+Open five tabs in your browser(don't close them)
 
 Open main.py
  
